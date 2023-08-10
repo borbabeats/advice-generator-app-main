@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+/*primary*/
+/*neutral*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  align-self: center;
+  background-color: hsl(217, 19%, 24%);
+  padding: 2rem;
+  text-align: center;
+  max-width: 530px;
+  border-radius: 14px;
+  box-shadow: 0 4px 32px -16px;
+  margin: 50px auto;
+}
+.card span {
+  display: flex;
+  justify-content: center;
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.card p {
+  font-size: 28px;
+  color: hsl(193, 38%, 86%);
+  margin: 28px 0;
+}
+.card .divider-mobile {
+  display: none;
+}
+.card .dice {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card .dice:after {
+  content: "teste";
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+  top: 0;
+  left: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    max-width: 360px;
+  }
+  .card .divider {
+    display: none;
+  }
+  .card .divider-mobile {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
