@@ -19,11 +19,11 @@ body {
   position: relative;
   align-self: center;
   background-color: hsl(217, 19%, 24%);
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
   max-width: 530px;
   border-radius: 14px;
-  box-shadow: 0 4px 32px -16px;
+  box-shadow: 0 18px 32px 4px rgba(0, 0, 0, 0.3333333333);
   margin: 50px auto;
 }
 .card span {
@@ -41,21 +41,35 @@ body {
 .card .divider-mobile {
   display: none;
 }
+.card .divider {
+  margin-bottom: 20px;
+}
 .card .dice {
+  cursor: pointer;
   position: absolute;
   top: 95%;
   left: 50%;
   transform: translateX(-50%);
 }
+.card .dice img {
+  width: 100%;
+  z-index: 2;
+}
 .card .dice:after {
-  content: "teste";
-  width: 48px;
-  height: 48px;
+  content: "";
+  width: 62px;
+  height: 62px;
   position: absolute;
   border-radius: 50%;
   background-color: hsl(150, 100%, 66%);
   top: 0;
   left: 0;
+  transform: translate(-30%, -30%);
+  z-index: -1;
+}
+.card .dice:hover {
+  box-shadow: 0 0 24px 16px hsl(150, 100%, 66%);
+  border-radius: 50%;
 }
 
 .attribution {
@@ -68,6 +82,7 @@ body {
 
 @media screen and (max-width: 500px) {
   .card {
+    padding: 2.5rem 1.5rem;
     max-width: 360px;
   }
   .card .divider {
@@ -75,6 +90,11 @@ body {
   }
   .card .divider-mobile {
     display: block;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  .card .dice {
+    top: 98%;
   }
 }
 
