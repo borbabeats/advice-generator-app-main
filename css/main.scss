@@ -13,14 +13,14 @@
 
 body {
     background-color: colors.$dark-blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    position: relative;
+    height: 80vh;
 }
 
 .card {
     position: relative;
-    align-self: center;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: colors.$dark-grayish-blue;
     padding: 2.5rem;
     text-align: center;
@@ -74,6 +74,8 @@ body {
 }
 
 .attribution { 
+    position: relative;
+    top: 225px;
     font-size: 11px; 
     text-align: center; 
     a { color: hsl(228, 45%, 44%); }
